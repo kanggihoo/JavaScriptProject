@@ -1,0 +1,134 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:#222;
+    
+
+}
+
+.card {
+    margin:100px auto 0;
+    max-width: 470px;
+    width:90%;
+    text-align: center;
+    background: linear-gradient(135deg , #00feba ,#5b548a );
+    color: #fff;
+    border-radius: 20px;
+    padding: 40px 35px;
+}
+
+.search {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search input {
+    border:0;
+    outline: 0;
+    background: #ebfffc;
+    padding: 10px 25px;
+    flex: 1;
+    margin-right:40px;
+    font-size:18px;
+    height: 60px;
+    border-radius: 30px;
+
+}
+
+.search button {
+    outline: 0;
+    border: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search button:hover , .search button:active {
+    cursor: pointer;
+    background-color: gray;
+}
+
+.search button img {
+    width: 30px;
+}
+
+
+.weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.weather img{
+    height: 140px;
+}
+
+.weather .temp{
+    font-size: 80px;
+}
+.weather .cityName {
+    font-size: 40px;
+    font-weight: 300;
+}
+
+
+.detail {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col1 , .col2 {
+    display: flex;
+    align-items: center;
+}
+
+.col1 .hum__icon , .col2 .win__icon {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+
+
+.col1 div , .col2 div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.col1 p:first-child , .col2 p:first-child {
+    font-size: 22px;
+}
+
+.col1 p:last-child , .col2 p:last-child {
+    font-size: 15px;
+}
+
+
+.info {
+    display: none;
+}
+
+.errorMsg {
+    display: none;
+    text-align: start;
+    font-size: 16px;
+    color: red;
+    font-weight: 600;
+
+}
+
+.errorMsg.true{
+    display: block;
+}
+

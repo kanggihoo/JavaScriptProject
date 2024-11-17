@@ -1,0 +1,111 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F8EFFE;
+    margin: 30px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.NoteBtn button{
+    font-size: 15px;
+    padding: 10px 15px;
+    width: 100px;
+    background-color: #353333;
+    color: white;
+    margin-right: 10px;
+}
+
+.NotePage{
+    height: 100px;
+    position: absolute;
+    bottom: 50px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.NotePage div {
+    display: flex;
+    padding: 20px 15px;
+    width: 400px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+    align-items: center;
+    margin: 10px 0px;
+    position: relative;
+    transform : translateX(100%);
+    animation: moveleft 0.5s linear forwards;
+}
+
+/* 오른쪽에서 왼쪽으로 움직이는 모션 */
+@keyframes moveleft {
+    100% {
+        transform : translateX(0%);
+    }
+    
+}
+
+/* 하단에 메세지에 맞는 색상의 하단바 생성 */
+.NotePage div::after {
+    content: "";
+    width : 100%;
+    height: 5px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    animation: processbar 3s linear forwards;
+    transform-origin: left;
+}
+
+@keyframes processbar {
+    100% {
+        width:0%;
+    }
+}
+
+
+.NotePage div.success::after {
+    background-color: yellow;
+}
+
+.NotePage div.error::after {
+    background-color: red;
+}
+
+.NotePage div.invalid::after {
+    background-color: green;
+}
+
+
+
+
+
+.NotePage i {
+    display: flex;
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+}
+
+.NotePage div.success i {
+    background-color: yellow;
+}
+
+.NotePage div.error i {
+    background-color: red;
+}
+
+.NotePage div.invalid i {
+    background-color: green;
+}
+
